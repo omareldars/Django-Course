@@ -1,0 +1,27 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Django</div>
+            <div class="panel-body">
+                {% include 'opensource/header.html' %}
+                {% block title_block %}
+                {% endblock %}
+
+                {% block main_block %}
+                {% endblock %}
+                {% include 'opensource/footer.html' %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

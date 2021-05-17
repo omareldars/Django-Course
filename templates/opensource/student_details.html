@@ -1,0 +1,25 @@
+{% extends 'opensource/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% load static %}
+    {% block title_block %}
+        <h1>Welcome: {{ student.fname }}  {{ student.lname }}</h1><br>
+    {% endblock %}
+
+    {% block main_block %}
+        <br>
+            <a href="/opensource/all"><img src="{% static 'img/1.JPG' %}" width="100" height="50"></a>
+        <br>
+        <h3><b> First Name:</b> {{ student.fname }}</h3><br>
+        <h3><b> LAst Name:</b> {{ student.lname }}</h3><br>
+        <h3><b> Age:</b> {{ student.age }}</h3><br>
+        <h3><b> Track:</b> {{ student.student_track }}</h3><br><br>
+    {% endblock %}
+</body>
+</html>

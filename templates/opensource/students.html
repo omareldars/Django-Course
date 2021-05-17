@@ -1,0 +1,44 @@
+{% extends 'opensource/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block title_block %}
+        <h1>All Students</h1>
+    {% endblock %}
+
+    {% block main_block %}
+        <a href="/opensource/new">Add New Student</a>
+        <table border="1" class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Track</th>
+                    <th>Graduated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for st in students %}
+                    <tr>
+                        <td><a href="/opensource/student/{{ st.id }}">{{ st.fname }}</a></td>
+                        <td>{{ st.lname }}</td>
+                        <td>{{ st.age }}</td>
+                        <td>{{ st.student_track }}</td>
+                        <td>{{ st.is_graduated }}</td>
+                        <td>
+                            <a href="/opensource/edit/{{ st.id }}">Edit</a>
+                            <a href="/opensource/delete/{{ st.id }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endblock %}
+</body>
+</html>
