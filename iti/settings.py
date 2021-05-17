@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'iti.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django1',
-        'USER': 'root',
-        'PASSWORD': 'omar1234',
+        'NAME': 'dbname',
+        'USER': 'username',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306'
     }
